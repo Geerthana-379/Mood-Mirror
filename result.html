@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Mood</title>
+  <link rel="stylesheet" href="result.css" />
+</head>
+<body>
+  <div class="result-container">
+    <h1>Your Mood Captured ✨</h1>
+    <img id="photo" alt="Captured Mood" />
+    <p class="quote" id="quote">
+    </p>
+    <a href="index.html" class="back-button">🔄 Try Again</a>
+  </div>
+  <script>
+  const img = document.getElementById("photo");
+  const dataURL = localStorage.getItem("capturedImage");
+
+  if (dataURL) {
+    img.src = dataURL;
+  } else {
+    img.alt = "No image captured.";
+  }
+
+  // 💬 List of quotes
+  const quotes = [
+    "This image holds the silence of your struggles,<br>and the echo of a soul that refused to give up.",
+    "Even on your hardest days, this face carries quiet strength.",
+    "Behind every smile is a story that no one sees.",
+    "This picture captures resilience in its rawest form.",
+    "The light in your eyes outshines the shadows in your past.",
+    "You are a living proof that storms don't last forever.",
+    "Your journey is painted in silent courage and unseen battles.",
+    "Through the lens, we see not just a face, but a fighter."
+  ];
+
+  // 🌀 Randomly select a quote
+  const quoteElement = document.getElementById("quote");
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  quoteElement.innerHTML = quotes[randomIndex];
+</script>
+
+</body>
+</html>
