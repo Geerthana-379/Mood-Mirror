@@ -1,0 +1,4 @@
+📸 Capture and display user image (from webcam or upload).
+💬 Randomly display a deep, personalized quote.
+🔄 "Try Again" button for capturing new moments.
+💖 Uplifts and motivates users with thoughtful reflections.
